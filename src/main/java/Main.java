@@ -8,6 +8,7 @@ class Main {
     public static void main(String[] args) {
         readFile();
         iterateAfterMap();
+        mapOfNumbers.clear();
     }
 
     static Map<Integer, Integer> mapOfNumbers = new HashMap<>();
@@ -38,8 +39,9 @@ class Main {
             e.printStackTrace();
         } finally {
             try {
-                if (reader != null)
+                if (reader != null) {
                     reader.close();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
